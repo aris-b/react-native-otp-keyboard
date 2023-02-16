@@ -30,7 +30,7 @@ export default function useTextManager({ maxLength, onPress, onSubmitPress }: OT
             if (maxLength && OTP.current.length >= maxLength) return;
 
             if (text) {
-                OTP.current = OTP.current + text;
+                OTP.current = text;
                 if (typeof onPress === "function") onPress(OTP.current);
             }
         } catch (error) { }
